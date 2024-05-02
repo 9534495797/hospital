@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Facilities</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    /* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: #0074d9;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Facility section styles */
+.facilities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.facility {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+.facility img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.facility h2 {
+    font-size: 18px;
+    color: #333;
+}
+
+.facility p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ddd;
+    color: #333;
+}
+nav {
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+</style>
+<body>
+    <header>
+        <h1>Sri Sai Hospital</h1>
+        <p>Your Health, Our Priority</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="facility.html">Facilities</a></li>
+            <li><a href="booking.html">Bookings</a></li>
+            <li><a href="medicine.html">Medicines</a></li>
+            <li><a href="options.html">Options</a></li>
+        </ul>
+    </nav>
+    <section class="facilities">
+        <div class="facility">
+            <img src="data:image/jpeg;base64,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" alt="Ambulance">
+
+            <h2>Ambulance Services</h2>
+            <p>24/7 emergency ambulance services for quick medical assistance.</p>
+        </div>
+
+        <div class="facility">
+            <img src="https://www.shutterstock.com/image-photo/empty-patient-room-modern-hospital-260nw-317573378.jpg" alt="Private Room">
+            <h2>Private and Semi-Private Rooms</h2>
+            <p>Comfortable rooms for patients with personalized care.</p>
+        </div>
+
+        <div class="facility">
+            <img src="https://www.shutterstock.com/image-photo/senior-radiologist-controls-mri-ct-260nw-1927970642.jpg" alt="MRI">
+            <h2>Advanced Lab Facilities</h2>
+            <p>State-of-the-art MRI and CT scan facilities for accurate diagnosis.</p>
+        </div>
+
+        <div class="facility">
+            <img src="https://www.shutterstock.com/image-photo/medical-team-performing-surgical-operation-260nw-741433885.jpg" alt="Operation Theater">
+            <h2>Modern Operation Theaters</h2>
+            <p>Equipped OTs for safe surgeries and procedures.</p>
+        </div>
+
+        <div class="facility">
+            <img src="https://t3.ftcdn.net/jpg/06/29/07/22/360_F_629072294_l7NgGEUvrQOMJXqn10wpF4HGhrDfETOm.jpg" alt="Canteen">
+            <h2>Hospital Canteen</h2>
+            <p>Spacious canteen offering nutritious meals for patients and visitors.</p>
+        </div>
+    </section>
+
+    <!-- Add more sections and content as needed -->
+
+    <footer>
+        <p>© 2023 Sri Kara Hospital</p>
+    </footer>
+</body>
+</html>

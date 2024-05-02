@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medicines</title>
+<style>
+/* CSS styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.dark-mode {
+    background-color: #222;
+}
+
+.light-mode {
+    background-color: #f4f4f4;
+}
+
+.container {
+    margin: 20px;
+}
+
+.medication-list {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.medication-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.medication-list ul li {
+    margin-bottom: 10px;
+}
+
+.form-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="tel"],
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+
+.background-image img {
+    opacity: 0.3;
+}
+nav {
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Add more CSS styles as needed */
+</style>
+</head>
+<body class="dark-mode">
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="facility.html">Facilities</a></li>
+            <li><a href="booking.html">Bookings</a></li>
+            <li><a href="medicine.html">Medicines</a></li>
+            <li><a href="options.html">Options</a></li>
+        </ul>
+    </nav>
+<div class="background-image">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPYpOCdPHpeQtW_uuBplKdKyIc1KpQde_63XyxpI3mucQkfh-9VuP4jys5xk9yxrzcRXE&usqp=CAU" alt="Background Image 1" width="100%">
+</div>
+
+<div class="container">
+    <div class="medication-list">
+        <h2>Medications by Department</h2>
+        <ul>
+            <li><strong>Injuries:</strong> Painkillers, Antibiotics, Bandages</li>
+            <li><strong>Cardiology:</strong> Beta-blockers, ACE inhibitors, Statins</li>
+            <li><strong>Neurology:</strong> Antidepressants, Anticonvulsants, Analgesics</li>
+            <li><strong>Oncology:</strong> Chemotherapy drugs, Immunotherapy drugs, Hormonal therapy drugs</li>
+            <!-- Add more departments and medications here -->
+        </ul>
+    </div>
+
+    <div class="form-container">
+        <h2>Request Medication</h2>
+        <form action="submit_medication.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="address">ADDRESS:(kindly provide full detailed address with pin code)</label>
+            <input type="text" id="phone" name="address" required>
+
+            <label for="department">Department:</label>
+            <select id="department" name="department">
+                <option value="injuries">Injuries</option>
+                <option value="cardiology">Cardiology</option>
+                <option value="neurology">Neurology</option>
+                <option value="oncology">Oncology</option>
+                <!-- Add more department options here -->
+            </select>
+
+            <label for="medication">Medication:</label>
+            <textarea id="medication" name="medication" required></textarea>
+            <h1>kindly upload the doctor's wriiten report:</h1>
+            <input type="file" id="image" name="image"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
